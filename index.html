@@ -3,32 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Temas y subtemas de Introducción a las Telecomunicaciones - ITSAO">
 <title>Introducción a las Telecomunicaciones | ITSAO</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#243447}
-header{background:linear-gradient(135deg,#0d2d4f,#1976d2);color:white;text-align:center;padding:50px 20px}
-h1{font-size:clamp(28px,5vw,44px)} .emoji{font-size:48px}
-main{max-width:900px;margin:30px auto;padding:0 20px}
-.card{background:white;border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 5px 18px rgba(0,0,0,.08)}
-h2{color:#123b66} .actividad{border:1px solid #dce5ef;border-radius:12px;padding:18px;background:#fafcff}
-.badge{background:#e8f2ff;color:#125a9c;padding:5px 10px;border-radius:20px;font-size:13px;font-weight:bold}
-footer{text-align:center;padding:30px;color:#667788}
+:root{--azul:#0b3d91;--azul2:#1565c0;--claro:#eaf3ff;--texto:#263238;--gris:#607d8b;--fondo:#f4f7fb;--blanco:#fff;--borde:#dce5ef}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fondo)}
+header{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;padding:48px 20px 42px;text-align:center}
+.badge{display:inline-block;padding:7px 14px;border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:14px;margin-bottom:15px;background:rgba(255,255,255,.1)}
+header h1{margin:0 0 10px;font-size:clamp(30px,5vw,48px)}header p{margin:0;font-size:18px;opacity:.92}
+.container{width:min(1100px,92%);margin:30px auto 50px}
+.welcome{background:#fff;border:1px solid var(--borde);border-radius:16px;padding:25px 28px;box-shadow:0 5px 18px rgba(20,50,90,.07);margin-bottom:30px}
+.welcome h2{margin:0 0 10px;color:var(--azul)}.welcome p{margin:0;line-height:1.7;text-align:justify}
+.section-title{color:var(--azul);margin:30px 0 15px;font-size:28px}
+.theme-grid{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.theme-grid .card{
+  width:100%;
+}
+.card{background:#fff;border:1px solid var(--borde);border-radius:16px;padding:24px;box-shadow:0 5px 18px rgba(20,50,90,.07);transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 9px 24px rgba(20,50,90,.12)}
+.icon{width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:var(--claro);border-radius:14px;font-size:28px;margin-bottom:15px}
+.topic-number{display:inline-block;background:#e8f2ff;color:#125a9c;padding:5px 10px;border-radius:20px;font-size:13px;font-weight:bold;margin-bottom:10px}
+.card h3{margin:0 0 10px;color:#1d3557;font-size:22px}.card p{margin:0 0 18px;color:#546e7a;line-height:1.6}
+.subtopics{margin:0;padding:15px 0 0 0;border-top:1px solid var(--borde);list-style:none}.subtopics li{margin:8px 0;line-height:1.45}
+.info{margin-top:30px;background:#fff;border-left:5px solid var(--azul2);border-radius:10px;padding:18px 20px;border-top:1px solid var(--borde);border-right:1px solid var(--borde);border-bottom:1px solid var(--borde);line-height:1.6}
+footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font-size:14px}
+@media(max-width:600px){header{padding:35px 15px}.welcome{padding:20px}.card{padding:20px}}
 </style>
 </head>
 <body>
-<header><div class="emoji">📡</div><h1>Introducción a las Telecomunicaciones</h1><p>ITSAO · Ingeniería Electrónica</p></header>
-<main>
-<section class="card">
-<h2>Bienvenido</h2>
-<p>En este sitio se publicarán las instrucciones, recursos, ejercicios, prácticas y evidencias de la asignatura.</p>
+<header>
+<div class="badge">ITSAO · Ingeniería Electrónica</div>
+<h1>📡 Introducción a las Telecomunicaciones</h1>
+<p>Temas, subtemas, actividades y recursos de la asignatura</p>
+</header>
+<main class="container">
+<section class="welcome">
+<h2>Bienvenidos</h2>
+<p>En este sitio encontrarás los <strong>temas y subtemas</strong> de la asignatura <strong>Introducción a las Telecomunicaciones</strong>. Cada tema presenta su estructura temática para facilitar la consulta de contenidos, actividades, ejercicios, prácticas y recursos que se incorporarán conforme avance el curso.</p>
 </section>
-<section class="card">
-<h2>📚 Actividades</h2>
-<div class="actividad"><span class="badge">Próximamente</span>
-<h3>Actividades de la asignatura</h3>
-<p>Las actividades se agregarán conforme avance el curso.</p></div>
-</section>
+<h2 class="section-title">📚 Temas de la asignatura</h2>
+<div class="theme-grid">
+
+<article class="card"><div class="icon">📡</div><span class="topic-number">Tema 1</span><h3>Introducción a las telecomunicaciones</h3><p>Conceptos fundamentales, elementos, medios, ruido, ancho de banda, normatividad y protocolos de comunicación.</p><ol class="subtopics">
+<li><strong>1.1.</strong> Definición de las telecomunicaciones.</li>
+<li><strong>1.2.</strong> Elementos de un sistema de comunicación.</li>
+<li><strong>1.3.</strong> Espectro electromagnético.</li>
+<li><strong>1.4.</strong> Modos de transmisión.</li>
+<li><strong>1.5.</strong> Medios de transmisión.</li>
+<li><strong>1.6.</strong> Ruido.</li>
+<li><strong>1.7.</strong> Ancho de banda.</li>
+<li><strong>1.8.</strong> Normatividad de sistemas de comunicación.</li>
+<li><strong>1.9.</strong> Protocolos de Comunicación.</li>
+</ol></article>
+
+<article class="card"><div class="icon">〰️</div><span class="topic-number">Tema 2</span><h3>Comunicación Analógica</h3><p>Modulación de amplitud y modulación angular, espectros, ancho de banda, circuitos, sistemas y aplicaciones.</p><ol class="subtopics">
+<li><strong>2.1.</strong> Modulación de Amplitud (AM).</li>
+<li><strong>2.1.1.</strong> Modulación de Amplitud.</li>
+<li><strong>2.1.2.</strong> Espectro de frecuencias de AM.</li>
+<li><strong>2.1.3.</strong> Ancho de banda.</li>
+<li><strong>2.1.4.</strong> Circuitos moduladores de AM.</li>
+<li><strong>2.1.5.</strong> Circuitos receptores de AM.</li>
+<li><strong>2.1.6.</strong> Sistema de banda lateral única con portadora completa.</li>
+<li><strong>2.1.7.</strong> Sistema de banda lateral única con portadora suprimida.</li>
+<li><strong>2.1.8.</strong> Aplicaciones. (Radiodifusión).</li>
+<li><strong>2.2.</strong> Modulación Angular (FM, PM).</li>
+<li><strong>2.2.1.</strong> Modulación de fase (PM).</li>
+<li><strong>2.2.2.</strong> Modulación de frecuencia (FM).</li>
+<li><strong>2.2.3.</strong> Sensibilidad a la desviación.</li>
+<li><strong>2.2.4.</strong> Desviación de fase e índice demodulación.</li>
+<li><strong>2.2.5.</strong> Desviación de frecuencia.</li>
+<li><strong>2.2.6.</strong> Ancho de banda.</li>
+<li><strong>2.2.7.</strong> Espectro de frecuencias en una señal de FM.</li>
+<li><strong>2.2.8.</strong> Ruido en FM Y AM.</li>
+</ol></article>
+
+<article class="card"><div class="icon">💻</div><span class="topic-number">Tema 3</span><h3>Comunicación Digital</h3><p>Modulación digital, comunicación de datos, detección de errores, conversión de datos, transmisión, interfaces y multiplexación.</p><ol class="subtopics">
+<li><strong>3.1.</strong> Modulación Digital.</li>
+<li><strong>3.1.1.</strong> Introducción.</li>
+<li><strong>3.1.2.</strong> Teorema de Shannon.</li>
+<li><strong>3.1.3.</strong> Modulación digital ASK.</li>
+<li><strong>3.1.4.</strong> Modulación digital FSK.</li>
+<li><strong>3.1.5.</strong> Modulación digital PSK.</li>
+<li><strong>3.1.6.</strong> Modulación digital QAM.</li>
+<li><strong>3.2.</strong> Comunicación de datos.</li>
+<li><strong>3.2.1.</strong> Transmisión digital de datos.</li>
+<li><strong>3.2.1.1.</strong> Ventajas y desventajas de la transmisión digital.</li>
+<li><strong>3.2.2.</strong> Detección de errores.</li>
+<li><strong>3.2.3.</strong> Conversión de datos.</li>
+<li><strong>3.2.4.</strong> Transmisión en paral.y ser.</li>
+<li><strong>3.2.5.</strong> Modulación delta.</li>
+<li><strong>3.2.6.</strong> Modulación por pulsos (PAM, PWM,PPM y PCM).</li>
+<li><strong>3.2.7.</strong> Interfaces seriales.</li>
+<li><strong>3.3.</strong> Mux y Demux.</li>
+<li><strong>3.3.1.</strong> Principios de mux.</li>
+<li><strong>3.3.2.</strong> Mux por división de frecuencia.</li>
+<li><strong>3.3.3.</strong> Mux por división de tiempo.</li>
+<li><strong>3.3.4.</strong> Mux por división de cód.</li>
+<li><strong>3.3.5.</strong> Circuitos Mux y demux.</li>
+</ol></article>
+
+<article class="card"><div class="icon">📶</div><span class="topic-number">Tema 4</span><h3>Sistemas de Telecomunicaciones</h3><p>Principales sistemas y tecnologías de telecomunicaciones utilizados para la transmisión de información.</p><ol class="subtopics">
+<li><strong>4.1.</strong> Sistema de Telefonía fija.</li>
+<li><strong>4.2.</strong> Sistema de telefonía celular.</li>
+<li><strong>4.3.</strong> Microondas.</li>
+<li><strong>4.4.</strong> Satélites.</li>
+<li><strong>4.5.</strong> Televisión.</li>
+</ol></article>
+
+</div>
+<section class="info"><strong>📌 Importante:</strong> Revisa periódicamente este sitio para consultar nuevas actividades, instrucciones, fechas de entrega, prácticas y recursos proporcionados por el docente.</section>
 </main>
-<footer>Ingeniería Electrónica · Instituto Tecnológico Superior de Acatlán de Osorio (ITSAO)</footer>
+<footer>Ingeniería Electrónica · Osmar García Zanabria</footer>
 </body>
 </html>
