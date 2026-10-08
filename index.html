@@ -32,6 +32,13 @@ header h1{margin:0 0 10px;font-size:clamp(30px,5vw,48px)}header p{margin:0;font-
 .subtopics{margin:0;padding:15px 0 0 0;border-top:1px solid var(--borde);list-style:none}.subtopics li{margin:8px 0;line-height:1.45}
 .info{margin-top:30px;background:#fff;border-left:5px solid var(--azul2);border-radius:10px;padding:18px 20px;border-top:1px solid var(--borde);border-right:1px solid var(--borde);border-bottom:1px solid var(--borde);line-height:1.6}
 footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font-size:14px}
+.activities{margin-top:22px;padding-top:18px;border-top:1px solid var(--borde)}
+.activities h4{margin:0 0 12px;color:var(--azul);font-size:17px}
+.activity-list{margin:0;padding:0;list-style:none}
+.activity-list li{margin:8px 0}
+.activity-list a{display:block;padding:10px 12px;border-radius:9px;background:#f7faff;border:1px solid #dce8f5;color:#1565c0;text-decoration:none;font-weight:600;transition:.2s}
+.activity-list a:hover{background:#eaf3ff;transform:translateX(3px)}
+.activity-status{margin:0;color:var(--gris);font-size:14px}
 @media(max-width:600px){header{padding:35px 15px}.welcome{padding:20px}.card{padding:20px}}
 </style>
 </head>
@@ -59,7 +66,7 @@ footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font
 <li><strong>1.7.</strong> Ancho de banda.</li>
 <li><strong>1.8.</strong> Normatividad de sistemas de comunicación.</li>
 <li><strong>1.9.</strong> Protocolos de Comunicación.</li>
-</ol></article>
+</ol><div class="activities" data-theme="Tema 1"><h4>📚 Actividades</h4><p class="activity-status" role="status">Cargando actividades...</p><ul class="activity-list"></ul></div></article>
 
 <article class="card"><div class="icon">〰️</div><span class="topic-number">Tema 2</span><h3>Comunicación Analógica</h3><p>Modulación de amplitud y modulación angular, espectros, ancho de banda, circuitos, sistemas y aplicaciones.</p><ol class="subtopics">
 <li><strong>2.1.</strong> Modulación de Amplitud (AM).</li>
@@ -80,7 +87,7 @@ footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font
 <li><strong>2.2.6.</strong> Ancho de banda.</li>
 <li><strong>2.2.7.</strong> Espectro de frecuencias en una señal de FM.</li>
 <li><strong>2.2.8.</strong> Ruido en FM Y AM.</li>
-</ol></article>
+</ol><div class="activities" data-theme="Tema 2"><h4>📚 Actividades</h4><p class="activity-status" role="status">Cargando actividades...</p><ul class="activity-list"></ul></div></article>
 
 <article class="card"><div class="icon">💻</div><span class="topic-number">Tema 3</span><h3>Comunicación Digital</h3><p>Modulación digital, comunicación de datos, detección de errores, conversión de datos, transmisión, interfaces y multiplexación.</p><ol class="subtopics">
 <li><strong>3.1.</strong> Modulación Digital.</li>
@@ -105,7 +112,7 @@ footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font
 <li><strong>3.3.3.</strong> Mux por división de tiempo.</li>
 <li><strong>3.3.4.</strong> Mux por división de cód.</li>
 <li><strong>3.3.5.</strong> Circuitos Mux y demux.</li>
-</ol></article>
+</ol><div class="activities" data-theme="Tema 3"><h4>📚 Actividades</h4><p class="activity-status" role="status">Cargando actividades...</p><ul class="activity-list"></ul></div></article>
 
 <article class="card"><div class="icon">📶</div><span class="topic-number">Tema 4</span><h3>Sistemas de Telecomunicaciones</h3><p>Principales sistemas y tecnologías de telecomunicaciones utilizados para la transmisión de información.</p><ol class="subtopics">
 <li><strong>4.1.</strong> Sistema de Telefonía fija.</li>
@@ -113,11 +120,89 @@ footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font
 <li><strong>4.3.</strong> Microondas.</li>
 <li><strong>4.4.</strong> Satélites.</li>
 <li><strong>4.5.</strong> Televisión.</li>
-</ol></article>
+</ol><div class="activities" data-theme="Tema 4"><h4>📚 Actividades</h4><p class="activity-status" role="status">Cargando actividades...</p><ul class="activity-list"></ul></div></article>
 
 </div>
 <section class="info"><strong>📌 Importante:</strong> Revisa periódicamente este sitio para consultar nuevas actividades, instrucciones, fechas de entrega, prácticas y recursos proporcionados por el docente.</section>
 </main>
 <footer>Ingeniería Electrónica · Osmar García Zanabria</footer>
+<script>
+/*
+  Carga automáticamente las actividades publicadas dentro de cada carpeta
+  Tema 1, Tema 2, ... Tema 4 del repositorio OsmarZanabria11/Telecomunicaciones.
+  No es necesario modificar este index cada vez que se agregue una actividad.
+*/
+const REPO_OWNER = "OsmarZanabria11";
+const REPO_NAME = "Telecomunicaciones";
+const REPO_BRANCH = "main";
+const PAGES_BASE = `https://${REPO_OWNER.toLowerCase()}.github.io/${REPO_NAME}/`;
+
+function pagesUrl(path){
+  return PAGES_BASE + path.split("/").map(encodeURIComponent).join("/");
+}
+
+function activityName(path){
+  const file = path.split("/").pop();
+  return file.replace(/\.html?$/i, "").replace(/[-_]+/g, " ").trim();
+}
+
+async function getFilesRecursive(path){
+  const api = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path.split("/").map(encodeURIComponent).join("/")}?ref=${REPO_BRANCH}`;
+  const response = await fetch(api, {headers:{Accept:"application/vnd.github+json"}});
+  if(response.status === 404) return [];
+  if(!response.ok) throw new Error(`GitHub API ${response.status}`);
+  const items = await response.json();
+  const files = [];
+
+  for(const item of items){
+    if(item.type === "file" && /\.html?$/i.test(item.name) && item.name.toLowerCase() !== "index.html"){
+      files.push(item.path);
+    }else if(item.type === "dir"){
+      const nested = await getFilesRecursive(item.path);
+      files.push(...nested);
+    }
+  }
+  return files;
+}
+
+async function loadActivities(){
+  const blocks = document.querySelectorAll(".activities[data-theme]");
+
+  for(const block of blocks){
+    const theme = block.dataset.theme;
+    const list = block.querySelector(".activity-list");
+    const status = block.querySelector(".activity-status");
+
+    try{
+      const files = await getFilesRecursive(theme);
+
+      files.sort((a,b)=>a.localeCompare(b,"es",{numeric:true,sensitivity:"base"}));
+
+      if(files.length === 0){
+        status.textContent = "Aún no hay actividades publicadas en este tema.";
+        continue;
+      }
+
+      status.remove();
+
+      files.forEach(path=>{
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = pagesUrl(path);
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = "▶ " + activityName(path);
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+    }catch(error){
+      console.error(`No se pudieron cargar las actividades de ${theme}:`, error);
+      status.textContent = "No fue posible consultar las actividades en este momento.";
+    }
+  }
+}
+
+loadActivities();
+</script>
 </body>
 </html>
