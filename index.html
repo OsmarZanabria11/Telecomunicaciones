@@ -11,7 +11,7 @@
 body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fondo)}
 header{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;padding:48px 20px 42px;text-align:center}
 .badge{display:inline-block;padding:7px 14px;border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:14px;margin-bottom:15px;background:rgba(255,255,255,.1)}
-header h1{margin:0 0 10px;font-size:clamp(30px,5vw,48px)}header p{margin:0;font-size:18px;opacity:.92}
+header h1{margin:0 0 10px;font-size:clamp(24px,4vw,36px)}header p{margin:0;font-size:16px;opacity:.92}
 .container{width:min(1100px,92%);margin:30px auto 50px}
 .welcome{background:#fff;border:1px solid var(--borde);border-radius:16px;padding:25px 28px;box-shadow:0 5px 18px rgba(20,50,90,.07);margin-bottom:30px}
 .welcome h2{margin:0 0 10px;color:var(--azul)}.welcome p{margin:0;line-height:1.7;text-align:justify}
@@ -40,6 +40,19 @@ footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font
 .activity-list a:hover{background:#eaf3ff;transform:translateX(3px)}
 .activity-status{margin:0;color:var(--gris);font-size:14px}
 @media(max-width:600px){header{padding:35px 15px}.welcome{padding:20px}.card{padding:20px}}
+
+.course-intro{color:#0000ee;font-size:16px}
+.course-intro h2,.course-intro h3{color:#0000ee}.course-intro h2{font-size:22px}.course-intro h3{font-size:18px}
+.course-intro p{margin:0 0 22px;line-height:1.65;text-align:justify}
+.course-intro ul{padding-left:28px;line-height:1.65;list-style-type:circle}
+.whatsapp-join{display:flex;flex-direction:column;align-items:center;gap:10px;width:fit-content;margin:20px auto 28px;color:#0000ee;text-decoration:none;font-weight:bold;text-align:center}
+.whatsapp-join img{width:150px;height:150px;object-fit:contain}
+.whatsapp-join:focus-visible{outline:3px solid #1565c0;outline-offset:6px}
+.course-signoff{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:24px}
+.course-signoff img{width:85px;height:85px;object-fit:contain}
+.course-signoff strong{text-align:center;flex:1}
+@media(max-width:600px){.course-signoff{flex-wrap:wrap;justify-content:center}.course-signoff strong{flex-basis:100%;order:-1}.course-intro p{text-align:left}}
+
 </style>
 </head>
 <body>
@@ -49,9 +62,30 @@ footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font
 <p>Temas, subtemas, actividades y recursos de la asignatura</p>
 </header>
 <main class="container">
-<section class="welcome">
+<section class="welcome course-intro" aria-label="Bienvenida e indicaciones del curso">
 <h2>Bienvenidos</h2>
-<p>En este sitio encontrarás los <strong>temas y subtemas</strong> de la asignatura <strong>Introducción a las Telecomunicaciones</strong>. Cada tema presenta su estructura temática para facilitar la consulta de contenidos, actividades, ejercicios, prácticas y recursos que se incorporarán conforme avance el curso.</p>
+<p>Bienvenido al curso de <strong>Introducción a las Telecomunicaciones</strong>, un entorno educativo diseñado para orientarlos en el fortalecimiento de sus habilidades en los sistemas de comunicación y las telecomunicaciones. A través de este espacio virtual, dispondrán de un acceso organizado a los contenidos teóricos, guías prácticas, ejercicios y materiales didácticos que les permitirán dominar los fundamentos de la asignatura.</p>
+<p>La intención de esta plataforma es facilitar el seguimiento de sus avances académicos, organizar sus entregas de manera clara y fomentar el aprendizaje continuo. Aquí podrán encontrar las actividades, indicaciones y fechas de entrega de las actividades solicitadas.</p>
+<p>Se les exhorta a desempeñarse con compromiso, coordinar sus tiempos y aprovechar cada actividad como una valiosa oportunidad para adquirir conocimientos y perfeccionar sus entregas.</p>
+<h3>Indicaciones:</h3>
+<ul>
+<li>Da clic en la imagen <strong>“Unirse al grupo de WhatsApp”</strong>.</li>
+<li>El grupo será un <strong>medio secundario de comunicación</strong> para avisos y recordatorios de la asignatura.</li>
+<li><strong>Horario de atención:</strong> lunes a viernes, de <strong>7:00 a.m. a 4:00 p.m.</strong></li>
+<li>Únete al grupo utilizando tu cuenta personal de WhatsApp.</li>
+<li>Utiliza el grupo únicamente para <strong>asuntos académicos</strong>.</li>
+<li>Evita enviar <strong>memes, cadenas, publicidad o contenido ajeno a la asignatura</strong>.</li>
+<li>Las actividades y entregas oficiales se realizarán mediante <strong>Moodle</strong>.</li>
+</ul>
+<a class="whatsapp-join" href="https://chat.whatsapp.com/JtZvnEWJtW2FgJRIzDyjHC" target="_blank" rel="noopener noreferrer" aria-label="Unirse al grupo de WhatsApp de Introducción a las Telecomunicaciones">
+<img src="https://i.ibb.co/yFg140Vv/wt.png" alt="WhatsApp" width="150" height="150">
+<span>Unirse al grupo de WhatsApp</span>
+</a>
+<div class="course-signoff">
+<img src="https://i.ibb.co/TDnrzr3Y/LOGO.png" alt="Ingeniería Electrónica" width="85" height="85">
+<strong>¡Mucho éxito en este proceso y bienvenidos!</strong>
+<img src="https://i.ibb.co/bvbtpPc/LOGO-TEC-ACATLAN.png" alt="Instituto Tecnológico Superior de Acatlán de Osorio — ITSAO" width="85" height="85">
+</div>
 </section>
 <h2 class="section-title">📚 Temas de la asignatura</h2>
 <div class="theme-grid">
