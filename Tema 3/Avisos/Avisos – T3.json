@@ -1,0 +1,134 @@
+{
+  "alineacion_bloques": {
+    "fecha": "left",
+    "formato": "left",
+    "nombres": "left"
+  },
+  "alineacion_imagenes": {
+    "imagen": "center",
+    "imagen_carga": "center",
+    "imagen_equipo": "right"
+  },
+  "titulos_secciones": {
+    "Datos de la actividad": {
+      "texto": "Datos de la actividad ",
+      "alineacion": "left"
+    },
+    "Descripción": {
+      "texto": "Examen sobre el el tipo de modulacion de la exposicion ",
+      "alineacion": "left"
+    },
+    "Requerimientos": {
+      "texto": "",
+      "alineacion": "left"
+    },
+    "Instrucciones de entrega": {
+      "texto": "",
+      "alineacion": "left"
+    },
+    "Instrucciones y criterios": {
+      "texto": " ",
+      "alineacion": "left"
+    },
+    "Criterios y condiciones": {
+      "texto": "",
+      "alineacion": "left"
+    },
+    "Entrega del archivo": {
+      "texto": "",
+      "alineacion": "left"
+    },
+    "Instrucciones para cargar el archivo": {
+      "texto": "",
+      "alineacion": "left"
+    },
+    "Formato para nombrar los archivos": {
+      "texto": "",
+      "alineacion": "left"
+    },
+    "Enlaces y recursos": {
+      "texto": "",
+      "alineacion": "left"
+    },
+    "Notas importantes": {
+      "texto": "",
+      "alineacion": "left"
+    },
+    "Checklist": {
+      "texto": "Checklist",
+      "alineacion": "left"
+    }
+  },
+  "formato_secciones": {
+    "0": {
+      "texto": "justify",
+      "imagen": "left"
+    },
+    "1": {
+      "texto": "justify",
+      "imagen": "center"
+    },
+    "2": {
+      "texto": "justify",
+      "imagen": "right"
+    },
+    "3": {
+      "texto": "justify",
+      "imagen": "center"
+    },
+    "4": {
+      "texto": "justify",
+      "imagen": "center"
+    },
+    "5": {
+      "texto": "justify",
+      "imagen": "right"
+    },
+    "6": {
+      "texto": "justify",
+      "imagen": "left"
+    }
+  },
+  "version": "2.25",
+  "numero": "",
+  "tema": "T3",
+  "ejercicio": "18",
+  "actividad": "",
+  "titulo_principal": "Asignacion de técnica de modulación digital",
+  "subtitulo": "Aviso unicamente para Jesus Eduardo y Jesus Eduardo",
+  "nombre_archivo": "Actividad X – T3.html",
+  "materia": "Introducción a las Telecomunicaciones",
+  "unidad": "Unidad 2: estructuras de control",
+  "titulo": "Asignacion de técnica de modulación digital",
+  "docente": "Osmar García Zanabria",
+  "institucion": "Instituto Tecnológico Superior de Acatlán de Osorio",
+  "fecha_limite": "",
+  "hora_limite": "",
+  "estado_entrega": "deshabilitado",
+  "mostrar_contador": "no",
+  "cierre_automatico": "si",
+  "descripcion": "Las técnicas de modulación digital que les toca a <span style=\"font-weight:bold\">N</span><span style=\"font-weight:bold\">a</span><span style=\"font-weight:bold\">v</span><span style=\"font-weight:bold\">a</span><span style=\"font-weight:bold\">r</span><span style=\"font-weight:bold\">r</span><span style=\"font-weight:bold\">e</span><span style=\"font-weight:bold\">t</span><span style=\"font-weight:bold\">e</span><span style=\"font-weight:bold\"> </span><span style=\"font-weight:bold\">M</span><span style=\"font-weight:bold\">a</span><span style=\"font-weight:bold\">r</span><span style=\"font-weight:bold\">t</span><span style=\"font-weight:bold\">i</span><span style=\"font-weight:bold\">n</span><span style=\"font-weight:bold\">e</span><span style=\"font-weight:bold\">z</span><span style=\"font-weight:bold\"> </span><span style=\"font-weight:bold\">J</span><span style=\"font-weight:bold\">e</span><span style=\"font-weight:bold\">s</span><span style=\"font-weight:bold\">u</span><span style=\"font-weight:bold\">s</span><span style=\"font-weight:bold\"> </span><span style=\"font-weight:bold\">E</span><span style=\"font-weight:bold\">d</span><span style=\"font-weight:bold\">u</span><span style=\"font-weight:bold\">a</span><span style=\"font-weight:bold\">r</span><span style=\"font-weight:bold\">d</span><span style=\"font-weight:bold\">o</span> es: ASK y Navarrete Martinez Yael Antonio es: <span style=\"font-weight:bold\">Q</span><span style=\"font-weight:bold\">A</span><span style=\"font-weight:bold\">M</span>",
+  "requerimientos": "",
+  "instrucciones": "",
+  "entrega": "",
+  "condiciones": "",
+  "instruccion_carga": "",
+  "instruccion_equipo": "<div style=\"text-align:justify\"><br></div>",
+  "imagen_carga": "",
+  "imagen_equipo": "",
+  "firma": "",
+  "simulacion": "",
+  "enlace": "",
+  "imagen": "",
+  "enlaces": "",
+  "imagen_carga_ancho": "310",
+  "imagen_carga_alto": "270",
+  "imagen_equipo_ancho": "310",
+  "imagen_equipo_alto": "270",
+  "imagen_entrega_ancho": "180",
+  "imagen_entrega_alto": "120",
+  "nota_entrega": "<div style=\"text-align:justify\"><span style=\"font-weight:bold\">N</span><span style=\"font-weight:bold\">o</span><span style=\"font-weight:bold\">t</span><span style=\"font-weight:bold\">a</span><span style=\"font-weight:bold\">:</span> No se entregara nada.</div>",
+  "notas": "<div style=\"text-align:justify\"><br></div>",
+  "checklist": "",
+  "apartados_adicionales": []
+}
